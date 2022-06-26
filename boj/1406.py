@@ -31,13 +31,16 @@ for _ in range(M):
     if op == 'P':
         c = line[1]
         # 새로운 노드 생성
-        next_node = Node(c)
+        new_node = Node(c)
         # 연결
-        next_node.right = current_node.right
-        current_node.right = next_node
-        next_node.left = current_node
+        next_node = current_node.right
+        new_node.right = next_node
+        new_node.left = current_node
+        current_node.right = new_node
+        if next_node is not None:
+            next_node.left = new_node
         # 커서 이동
-        current_node = next_node
+        current_node = new_node
     if op == 'L':
         # 맨 앞이 아닌 경우
         if current_node.left is not None:
