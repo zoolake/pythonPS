@@ -1,3 +1,7 @@
+# 참고: https://www.youtube.com/watch?v=yPuow6aACvE&ab_channel=BaaarkingDog
+# BFS를 여러 시작점에서 진행할 때, visited 배열을 새로 만들거나 매번 초기화 시키는 방법 => O(n^2)
+# visited를 체크하는 값을 매번 다른 값으로 넣어서 하는 방법 => O(n)
+
 import collections
 import sys
 
